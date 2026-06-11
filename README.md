@@ -32,9 +32,6 @@ mvn clean package
 
 # Run with skip tests
 mvn clean package -DskipTests
-
-# Install to local repository
-mvn clean install
 ```
 
 The compiled JAR will be located in the `target/` directory.
@@ -64,16 +61,30 @@ The compiled JAR will be located in the `target/` directory.
 ## Project Structure
 
 ```
-funrtp-project/
-├── pom.xml                    # Maven configuration
-├── src/
-│   └── main/
-│       ├── java/              # Source code
-│       │   └── ru/manus/funrtp/
-│       └── resources/         # Configuration files
-│           ├── plugin.yml
-│           └── config.yml
-└── target/                    # Build output (generated)
+src/
+├── main/
+│   ├── java/ru/manus/funrtp/
+│   │   ├── FunRTP.java (main plugin class)
+│   │   ├── commands/
+│   │   │   ├── RTPCommand.java
+│   │   │   └── AdminRTPCommand.java
+│   │   ├── menu/
+│   │   │   ├── MenuListener.java
+│   │   │   └── RTPMenu.java
+│   │   ├── rtp/
+│   │   │   ├── RTPType.java
+│   │   │   └── RTPUtil.java
+│   │   ├── utils/
+│   │   │   ├── ColorUtil.java
+│   │   │   ├── CooldownManager.java
+│   │   │   └── EconomyUtil.java
+│   │   └── hooks/
+│   │       └── FunEventsHook.java
+│   └── resources/
+│       ├── plugin.yml
+│       └── config.yml
+├── pom.xml
+└── .gitignore
 ```
 
 ## License
