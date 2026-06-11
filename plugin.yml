@@ -1,0 +1,16 @@
+# Download it here: https://black-minecraft.com/resources/10201/
+name: FunRTP
+version: 1.2
+main: ru.manus.funrtp.FunRTP
+api-version: 1.16
+commands:
+  rtp:
+    description: Open RTP menu
+  funrtp:
+    description: Admin RTP command
+    permission: funrtp.admin
+permissions:
+  funrtp.admin:
+    description: Admin permission for FunRTP
+    default: op
+softdepend: [Vault, FunEvents, SpookyEvents]
